@@ -23,6 +23,7 @@
   bottom: 0;
   width: 50%;
   background-color: #ffffff;
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.1);
 
   /* border: 1px solid red; */
   transform: translateX(150%);
@@ -53,7 +54,7 @@
 .active {
   transform: translateX(0);
 }
-.close {
+.close-menu {
   display: none;
 }
 header {
@@ -172,6 +173,11 @@ h1 span {
 p {
   font-size: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 2rem;
+}
+@media (min-width: 705px) {
+  .hamburger-menu {
+    display: none;
+  }
 }
 @media (max-width: 705px) {
   .container {
