@@ -35,8 +35,8 @@
   /* border: 2px solid green; */
 }
 .hamburger-menu nav ul {
-  width: 50%;
-  margin: 1rem 0;
+  width: 70%;
+  margin: 1.5rem 0;
 }
 .hamburger-menu nav ul + ul {
   text-align: center;
@@ -49,8 +49,72 @@
   width: 100%;
 }
 .hamburger-menu nav ul > li {
-  margin: 0.6rem 0;
+  margin: 0.8rem 0;
 }
+/* dropdown1 */
+
+.drop-down {
+  position: relative;
+  /* margin: 5rem auto 0 auto; */
+  width: 150px;
+  /* z-index: 200; */
+  /* border: 2px solid green; */
+}
+.inputField {
+  position: relative;
+  background-color: white;
+}
+.inputField .input {
+  text-align: right;
+  width: 100%;
+  padding: 0.3125rem 12% 0.3125rem 0;
+  cursor: pointer;
+}
+
+.arrow-box {
+  position: absolute;
+  width: 10%;
+  z-index: 200;
+  cursor: pointer;
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.arrow-box > div {
+  width: 8px;
+  height: 8px;
+  border: 3px solid hsl(0, 0%, 41%);
+  border-left: 0;
+  border-bottom: 0;
+  transform: rotate(495deg);
+}
+.options {
+  position: absolute;
+  margin-top: 0.5rem;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.47);
+  display: none;
+  /* border: 1px solid red; */
+}
+.open-options {
+  display: block;
+}
+
+.options > div {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+.options > div img {
+  margin-right: 0.5rem;
+}
+.options > div:hover {
+  background-color: cyan;
+}
+/* end of dropdown1 */
 .active {
   transform: translateX(0);
 }
@@ -138,13 +202,13 @@ header nav ul li {
   color: #ffffff;
   background-color: black;
   font-size: 1rem;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
   margin-bottom: 2.5rem;
   /* cursor:; */
 }
 .app-icons {
-  padding: 10px 0;
+  padding: 0.625rem 0;
   /* border: 1px solid green; */
 }
 .app-icons ul {
@@ -162,7 +226,7 @@ img {
 }
 /* fonts */
 h1 {
-  font-size: clamp(3rem, 8vw, 4.3rem);
+  font-size: clamp(2.2rem, 8vw, 4.3rem);
   margin-bottom: 2rem;
   color: hsl(0, 0%, 8%);
 }
