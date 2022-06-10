@@ -6,11 +6,16 @@
   text-decoration: none;
   color: hsl(0, 0%, 41%);
 }
+a:hover {
+  color: #181818;
+}
+button:hover {
+  border: 2px solid #181818;
+  color: #181818;
+}
 .container {
-  /* margin: 1rem auto 0 auto; */
+  /* margin: auto; */
   padding: 0.9375rem;
-  /* max-width: 100v; */
-  /* width: 90%; */
   position: relative;
   /* border: 1px solid black; */
   /* box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.1); */
@@ -59,7 +64,8 @@
 }
 header {
   display: flex;
-  padding: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #e8e8ea;
   /* border: 1px solid black; */
 }
 .ham {
@@ -84,10 +90,8 @@ header button {
   cursor: pointer;
 }
 header .logo {
-  /* display: flex; */
-  width: 10%;
+  width: 7%;
   margin-right: 3%;
-  /* border: 1px solid red; */
 }
 header .logo img {
   width: 100%;
@@ -95,7 +99,7 @@ header .logo img {
 }
 
 header nav {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 87%;
   display: flex;
   justify-content: space-between;
@@ -103,15 +107,15 @@ header nav {
   /* overflow: auto; */
 }
 header nav ul {
-  width: 50%;
+  width: 60%;
   /* border: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 header nav ul li {
-  border: 1px solid black;
-  width: 22%;
+  /* border: 1px solid black; */
+  width: 25%;
   cursor: pointer;
 }
 header nav ul + ul {
@@ -119,56 +123,78 @@ header nav ul + ul {
   /* justify-content: space-between; */
 }
 header nav ul + ul li {
-  width: 40%;
+  width: 50%;
 }
 a {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.15rem, 1.5vw, 1.2rem);
 }
 
 /* dropdown */
 /* company dropdown */
-.company {
+.features {
   display: flex;
   position: relative;
   background-image: url('./images/icon-arrow-down.svg');
   background-repeat: no-repeat;
   background-size: 10px;
-  background-position: right 6px top 9px;
+  background-position: left 69px bottom 50%;
 }
 .dropdown {
   box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
   position: absolute;
-  width: 130px;
-  border-radius: 5px;
-  left: -28px;
+  width: 150px;
+  border-radius: 8px;
+  left: -3rem;
   top: 2rem;
   /* border: 2px solid red; */
   height: 130px;
+  display: none;
 }
-.company > div div {
-  padding-left: 5px;
+.dropdown div {
+  padding-left: 10px;
   display: flex;
   align-items: center;
   width: 100%;
   height: 25%;
   /* border: 1px solid blue; */
 }
-.company > div div img {
-  width: 20px;
-  height: 20px;
+.dropdown div img {
+  width: 15px;
+  height: 15px;
   margin-right: 0.4rem;
 }
 .dropItems:hover {
   background-color: aqua;
   cursor: pointer;
 }
-.career {
+/* company dropdown2 */
+.company {
   position: relative;
   background-image: url('./images/icon-arrow-down.svg');
   background-repeat: no-repeat;
   background-size: 10px;
-  background-position: right 6px top 9px;
+  background-position: left 78px top 50%;
+}
+.dropdownTwo {
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: absolute;
+  width: 130px;
+  border-radius: 8px;
+  left: -1rem;
+  top: 2rem;
+  /* border: 2px solid red; */
+  height: 100px;
+  display: none;
+}
+.dropdownTwo > div {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 33.3%;
+  /* border: 1px solid blue; */
 }
 
 .page-content {
@@ -177,11 +203,9 @@ a {
   display: grid;
   grid-template-columns: 50% 50%;
 
-  padding: 2rem;
+  padding: 3rem;
 }
-/* .page-content > * {
-  border: 1px solid;
-} */
+
 .page-content figure {
   /* border: 1px solid red; */
   background-image: url('./images/image-hero-desktop.png');
@@ -192,7 +216,7 @@ a {
 
 .remote-work {
   /* border: 1px solid blue; */
-  padding: 30px;
+  padding: 12px 30px;
 }
 .remote-work button {
   color: #ffffff;
@@ -214,7 +238,7 @@ a {
 }
 
 .app-icons ul li {
-  width: clamp(2.5rem, 5vw, 5rem);
+  width: clamp(3rem, 5vw, 5rem);
 }
 img {
   width: 100%;
@@ -222,7 +246,8 @@ img {
 }
 /* fonts */
 h1 {
-  font-size: clamp(2.2rem, 8vw, 4.3rem);
+  font-size: clamp(2.5rem, 6vw, 4.3rem);
+  margin-top: 2rem;
   margin-bottom: 2rem;
   color: hsl(0, 0%, 8%);
 }
@@ -231,8 +256,19 @@ h1 span {
   color: hsl(0, 0%, 8%);
 }
 p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   margin-bottom: 2rem;
+}
+@media (max-width: 775px) {
+  .page-content {
+    padding: 2.5rem;
+  }
+  h1 span {
+    display: inline;
+  }
+  header nav ul {
+    width: 70%;
+  }
 }
 @media (min-width: 705px) {
   .hamburger-menu {
@@ -241,6 +277,7 @@ p {
 }
 @media (max-width: 705px) {
   .container {
+    overflow: hidden;
     margin-bottom: 1rem;
   }
   .ham {
