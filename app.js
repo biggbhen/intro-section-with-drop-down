@@ -15,24 +15,38 @@ ham.addEventListener('click', (e) => {
   }
 });
 // dropdown function
-const body = document.querySelector('body');
-const arrow = document.querySelector('.arrow-box'),
-  options = document.querySelector('.options'),
-  dropdown = document.querySelector('.drop-down');
-arrow.addEventListener('click', (x) => {
-  if (options.classList.contains('open-options')) {
-    options.classList.remove('open-options');
-    document.querySelector('.arrow').style.transform = 'rotate(495deg)';
-  } else {
-    options.classList.add('open-options');
-    document.querySelector('.arrow').style.transform = 'rotate(315deg)';
-  }
+const drop = document.querySelectorAll('.options'),
+  dropdown = document.querySelectorAll('.dropdown');
+// console.log(drop, dropdown);
+
+drop.forEach(() => {
+  addEventListener('click', (x) => {
+    if (dropdown.classList.contains('activeDropDown')) {
+      dropdown.classList.remove('activeDropDown');
+    } else {
+      dropdown.classList.add('activeDropDown');
+    }
+  });
 });
 
-options.addEventListener('click', (e) => {
-  const val = e.target.textContent;
+// const body = document.querySelector('body');
+// const arrow = document.querySelector('.arrow-box'),
+//   options = document.querySelector('.options'),
+//   dropdown = document.querySelector('.drop-down');
+// arrow.addEventListener('click', (x) => {
+//   if (options.classList.contains('open-options')) {
+//     options.classList.remove('open-options');
+//     document.querySelector('.arrow').style.transform = 'rotate(495deg)';
+//   } else {
+//     options.classList.add('open-options');
+//     document.querySelector('.arrow').style.transform = 'rotate(315deg)';
+//   }
+// });
 
-  if (e.target.parentElement.className === 'options open-options') {
-    document.querySelector('.input').textContent = val;
-  }
-});
+// options.addEventListener('click', (e) => {
+//   const val = e.target.textContent;
+
+//   if (e.target.parentElement.className === 'options open-options') {
+//     document.querySelector('.input').textContent = val;
+//   }
+// });
